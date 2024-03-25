@@ -15,7 +15,7 @@ class ContactApp extends React.Component {
 
   onDeleteHandler(id) {
     const contacts = this.state.contacts.filter((item) => item.id !== id);
-    
+
     this.setState({ contacts });
   }
 
