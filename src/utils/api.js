@@ -1,5 +1,3 @@
-import { func } from "prop-types";
-
 const BASE_URL = "https://contact-api.dicoding.dev/v1";
 
 function getAccessToken() {
@@ -7,7 +5,7 @@ function getAccessToken() {
 }
 
 function putAccessToken(accessToken) {
-  return localStorage.setItem("accesToken", accessToken);
+  return localStorage.setItem("accessToken", accessToken);
 }
 
 async function fetchWithToken(url, options = {}) {
@@ -23,7 +21,7 @@ async function fetchWithToken(url, options = {}) {
 async function login({ email, password }) {
   const response = await fetch(`${BASE_URL}/login`, {
     method: "POST",
-    header: {
+    headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
