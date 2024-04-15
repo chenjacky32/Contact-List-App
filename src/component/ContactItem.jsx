@@ -15,7 +15,7 @@ export default function ContactItem({ id, imageUrl, name, tag, onDelete }) {
 }
 
 ContactItem.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   imageUrl: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,

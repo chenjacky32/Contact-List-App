@@ -93,7 +93,7 @@ async function addContact({ name, tag }) {
   return { error: false };
 }
 
-async function getContacts() {
+async function GetContacts() {
   const response = await fetchWithToken(`${BASE_URL}/contacts`);
   const responseJson = await response.json();
 
@@ -120,4 +120,4 @@ async function deleteContact(id) {
   return { error: false };
 }
 
-export { getAccessToken, putAccessToken, login, register, getUserLogged, addContact, getContacts, deleteContact };
+export { getAccessToken, putAccessToken, login, register, getUserLogged, addContact, GetContacts, deleteContact };
